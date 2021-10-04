@@ -28,6 +28,9 @@ module.exports = {
     },
     backgroundPosition: {
       filmSize: "right top 5rem"
+    },
+    boxShadow: {
+      poster: "14px 12px 8px -8px rgba(0, 0, 0, 0.85)"
     }
   }
 };

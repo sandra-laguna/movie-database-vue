@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import TrendingFilms from "../views/TrendingFilms.vue";
 import SearchFilm from "../views/SearchFilm.vue";
+import TvPopular from "../views/TvPopular.vue";
 
 const routes = [
   {
@@ -26,6 +27,11 @@ const routes = [
     path: "/searchfilm",
     name: "SearchFilm",
     component: SearchFilm
+  },
+  {
+    path: "/tv",
+    name: "TvPopular",
+    component: TvPopular
   }
 ];
 
