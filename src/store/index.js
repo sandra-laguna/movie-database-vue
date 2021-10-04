@@ -1,6 +1,8 @@
 import Vuex from "vuex";
 import tendringModule from "./trendingFilms";
 import searchFilmModule from "./searchFilm";
+import tvPopularModule from "./tvPopular";
+import modals from "./modals";
 
 const store = new Vuex.Store({
   state: {},
@@ -8,7 +10,9 @@ const store = new Vuex.Store({
   actions: {},
   modules: {
     trending: tendringModule,
-    searchFilm: searchFilmModule
+    searchFilm: searchFilmModule,
+    tvPopular: tvPopularModule,
+    modals
   }
 });
 
