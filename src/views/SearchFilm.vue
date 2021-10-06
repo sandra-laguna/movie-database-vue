@@ -31,7 +31,7 @@
     </div>
   </div>
 
-  <div class="modal w-3/6 h-3/5 fixed inset-0 m-auto opacity-100 bg-white rounded-md shadow-xl p-5" v-show="modal">
+  <div class="modal w-3/6 h-144 fixed inset-0 m-auto opacity-100 bg-white rounded-md shadow-xl p-5" v-show="modal">
     <div
       class="h-80 bg-cover flex items-end rounded-md"
       :style="{
@@ -44,8 +44,8 @@
     >
       <h1 class="text-center text-5xl p-4">{{ contentModal.original_title }}</h1>
     </div>
-    <p v-if="contentModal.overview.length >= 10" class="h-36 text-black text-xl py-6">
-      {{ contentModal.overview.substring(0, 300) + "..." }}
+    <p class="h-40 text-black text-xl py-6">
+      {{ truncate(`${contentModal.overview}`, 300) }}
     </p>
 
     <div class="flex justify-between">
@@ -99,6 +99,9 @@ export default {
       this.contentModal = name;
       let modal = "toggleModal " + num;
       this[modal] = true;
+    },
+    truncate: function (str, num) {
+      return str.length > num ? str.substr(0, num - 1) + "..." : str;
     }
   }
   /*   async mounted() {
